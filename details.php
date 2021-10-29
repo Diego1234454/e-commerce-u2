@@ -135,7 +135,7 @@ session_start();
             <div class="col-2">
                 <h1><?= $row["product_name"]; ?></h1>
                 <h4><?= $row["price"]; ?></h4>
-                <a href="" class="btn">Add To Cart</a>
+                <a href="./carrito.php" class="btn">Add To Cart</a>
 
                 <h3>Game Details: <i class="fa fa-commenting"></i></h3><br>
                 <p><?= $row["product_detail"]; ?></p>
