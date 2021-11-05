@@ -1,3 +1,10 @@
+<?php
+
+// Initialize the session
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -156,6 +163,7 @@
     </div>
 
     <?php include("./layouts/footer.php"); ?> 
+    
   </div>
 
   <script src="js/jquery-3.3.1.min.js"></script>
