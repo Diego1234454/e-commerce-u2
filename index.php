@@ -76,7 +76,7 @@ session_start();
                 &copy;
                 <script>
                     document.write(new Date().getFullYear())
-                </script> Developed by: <a href="http://alexmedr.epizy.com/" target="_blank">Alejandro-Medrano</a>
+                </script> Developed by: <a href="" target="_blank">E-Commerce Website</a>
             </div>
         </div>
     </div>

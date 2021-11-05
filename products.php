@@ -128,7 +128,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 &copy;
                 <script>
                     document.write(new Date().getFullYear())
-                </script> Developed By: <a href="http://alexmedr.epizy.com/" target="_blank">Alejandro-Medrano</a>
+                </script> Developed By: <a href="" target="_blank">E-Commerce Website</a>
             </div>
         </div>
     </div>

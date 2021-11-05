@@ -132,6 +132,7 @@ session_start();
                 </div>
 
             </div>
+            
             <div class="col-2">
                 <h1><?= $row["product_name"]; ?></h1>
                 <h4><?= $row["price"]; ?></h4>
@@ -150,7 +151,7 @@ session_start();
                 &copy;
                 <script>
                     document.write(new Date().getFullYear())
-                </script> Develop By: <a href="http://alexmedr.epizy.com/" target="_blank">Alejandro-Medrano</a>
+                </script>: <a href="" target="_blank">E-Commerce Website</a>
             </div>
         </div>
     </div>

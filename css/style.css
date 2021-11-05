@@ -154,6 +154,10 @@ small {
 /* footer */
 .footer {
   background: black;
+  bottom: 0;
+}
+body{
+  margin: 0;   
 }
 
 .footer .container {
