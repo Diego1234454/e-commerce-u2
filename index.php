@@ -13,7 +13,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All-Games </title>
-    <link rel="shortcut icon" href="images/A.jpg" />
+    <link rel="shortcut icon" href="images/studio.png" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,7 +38,7 @@ session_start();
             if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
             ?>
             <li><a href="products.php"><b>Products</b></a></li>
-            <li><a href="./account/logout.php"><img src="images/logout.png" width="30px" height="30px"></a></li>
+            <li><a href="./account/logout.php"><img src="images/logout.png" width="18px" height="18px"></a></li>
             <?php
             } else {
             ?>
@@ -50,7 +50,7 @@ session_start();
 
                 </ul>
             </nav>
-            <img src="images/console.png" width="30px" height="30px">
+            <img src="images/console.png" width="25px" height="25px">
             <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
         </div>
     </div>

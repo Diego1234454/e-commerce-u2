@@ -1,9 +1,18 @@
 <?php
-
-// Initialize the session
-session_start();
-
+  include("./config.php");
+  if( isset($_GET['id'])){
+    $resultado = $link ->query("select * from products where id=".$_GET['id'])or die($link->error);
+    if(mysqli_num_rows($resultado) > 0 ){
+      $fila = mysqli_fetch_row($resultado);
+    }else{
+      header("Location: ./index.php");
+    }
+  }else{
+    //redireccionar
+    header("Location: ./index.php");
+  }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +21,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Commerce Products</title>
-    <link rel="shortcut icon" href="images/A.jpg" />
+    <link rel="shortcut icon" href="images/studio.png" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +44,7 @@ session_start();
             if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
             ?>
             <li><a href="products.php"><b>Products</b></a></li>
-            <li><a href="./account/logout.php"><img src="images/logout.png" width="30px" height="30px"></a></li>
+            <li><a href="./account/logout.php"><img src="images/logout.png" width="18px" height="18px"></a></li>
             <?php
             } else {
             ?>
@@ -76,6 +85,7 @@ session_start();
                     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
                     // Retrieve individual field value
+                   
                     $product_name    = $row["product_name"];
                     $price           = $row["price"];
                     $product_detail  = $row["product_detail"];
@@ -136,8 +146,9 @@ session_start();
             <div class="col-2">
                 <h1><?= $row["product_name"]; ?></h1>
                 <h4><?= $row["price"]; ?></h4>
-                <a href="./carrito.php" class="btn">Add To Cart</a>
+                <p><a href="./cart.php?id= <?php echo $fila[0]; ?>" class="btn">Add To Cart</a></p>
 
+             
                 <h3>Game Details: <i class="fa fa-commenting"></i></h3><br>
                 <p><?= $row["product_detail"]; ?></p>
             </div>

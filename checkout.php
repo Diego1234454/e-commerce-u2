@@ -8,7 +8,8 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Shoppers &mdash; Colorlib e-Commerce Template</title>
+    <title>Checkout</title>
+    <link rel="shortcut icon" href="images/studio.png" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -53,8 +54,22 @@ session_start();
                   <option value="5">Ghana</option>    
                   <option value="6">Albania</option>    
                   <option value="7">Bahrain</option>    
-                  <option value="8">Colombia</option>    
-                  <option value="9">Dominican Republic</option>    
+                  <option value="8">Brazil</option>    
+                  <option value="10">Colombia</option>
+                  <option value="11">Dominican </option>
+                  <option value="12">Canada</option>
+                  <option value="13">Europa</option>
+                  <option value="14">Germany</option>
+                  <option value="15">México</option>
+                  <option value="16">Monaco</option> 
+                  <option value="17">Nicaragua</option>
+                  <option value="18">Panama </option>
+                  <option value="19">Portugal</option>
+                  <option value="20">Spain</option>
+                  <option value="21">USA</option>
+                  <option value="22">Venezuela</option>
+                  <option value="23">Vietnam</option> 
+                  Brazil   
                 </select>
               </div>
               <div class="form-group row">
@@ -229,16 +244,16 @@ session_start();
                         <td>$650.00</td>
                       </tr>
                       <tr>
-                        <td>Battlefiel 2042<strong class="mx-2">x</strong>   1</td>
-                        <td>$1700.00</td>
+                        <td>Metro: Last Night<strong class="mx-2">x</strong>   1</td>
+                        <td>$300.00</td>
                       </tr>
                       <tr>
                         <td class="text-black font-weight-bold"><strong>Cart Subtotal</strong></td>
-                        <td class="text-black">$2350.00</td>
+                        <td class="text-black">$950.00</td>
                       </tr>
                       <tr>
                         <td class="text-black font-weight-bold"><strong>Order Total</strong></td>
-                        <td class="text-black font-weight-bold"><strong>$2350.00</strong></td>
+                        <td class="text-black font-weight-bold"><strong>$950.00</strong></td>
                       </tr>
                     </tbody>
                   </table>

@@ -20,7 +20,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products - E-Commerce</title>
-    <link rel="shortcut icon" href="images/A.jpg" />
+    <link rel="shortcut icon" href="images/studio.png" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,7 +45,21 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
             ?>
             <li><a href="products.php"><b>Products</b></a></li>
-            <li><a href="./account/logout.php"><img src="images/logout.png" width="30px" height="30px"></a></li>
+            <li>
+                    <a href="cart.php" class="site-cart"> <b>Cart </b>
+                    <img src="./images/cart.png" width="30px" height="30px">
+                      <span class="count">
+                        <?php 
+                          if(isset($_SESSION['carrito'])){
+                            echo count($_SESSION['carrito']);
+                          }else{ 
+                            echo 0;
+                          }
+                        ?>
+                      </span>
+                    </a>
+                  </li> 
+            <li><a href="./account/logout.php"><img src="images/logout.png" width="18px" height="18px"></a></li>
             <?php
             } else {
             ?>

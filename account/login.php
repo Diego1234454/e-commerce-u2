@@ -99,7 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="description" content="All-Games E-commerce Website" />
     <meta name="author" content="Alejandro Medrano" />
     <meta name="generator" content="PHP, MySQL" />
-    <link rel="shortcut icon" href="../images/A.jpg" />
+    <link rel="shortcut icon" href="../images/studio.png" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <title>Login</title>

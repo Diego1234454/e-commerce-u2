@@ -8,7 +8,8 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
   <head>
-   <title>E-Commerce Website</title>
+   <title>Thank you!</title>
+   <link rel="shortcut icon" href="images/studio.png" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -33,16 +34,16 @@ session_start();
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
-            <span class="icon-check_circle display-3 text-success"></span>
-            <h2 class="display-3 text-black">Thank you!</h2>
-            <p class="lead mb-5">You order was successfuly completed.</p>
+          <p><p> <p><p><img src="images/icon-check.png" width="70px" height="70px"> </p> </p> </p> </p>
+            <h1 class="display-3 text-black">Thank you!</h1>
+            <p class="lead mb-5">You order was successfully completed!.</p>
             <p><a href="products.php" class="btn btn-sm btn-primary">Back to shop</a></p>
           </div>
         </div>
       </div>
     </div>
 
-    <?php include("./layouts/footer.php"); ?> 
+
 
   </div>
 

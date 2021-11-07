@@ -138,7 +138,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta name="description" content="All-Games E-Commerce Website />
   <meta name="author" content="Alejandro - Medrano" />
   <meta name="generator" content="PHP, MySQL" />
-  <link rel="shortcut icon" href="../images/A.jpg" />
+  <link rel="shortcut icon" href="../images/studio.png" />
   <title>Registrar</title>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">

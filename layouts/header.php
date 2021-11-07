@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Commerce Products</title>
-    <link rel="shortcut icon" href="images/A.jpg" />
+    <link rel="shortcut icon" href="images/studio.png" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,12 +23,26 @@
             </div>
             <nav>
                 <ul id="MenuItems">
-                    <li><a href="./"><b>Home</b></a></li>
+                   <li> <a href="index.php" class="site-cart"><b>Home</b></a> </li>
  <?php
             if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
             ?>
             <li><a href="products.php"><b>Products</b></a></li>
-            <li><a href="./account/logout.php"><img src="images/logout.png" width="30px" height="30px"></a></li>
+               <li>
+                    <a href="cart.php" class="site-cart"> <b>Cart</b>
+                    <img src="./images/cart.png" width="25px" height="25px">
+                      <span class="count">
+                        <?php 
+                          if(isset($_SESSION['carrito'])){
+                            echo count($_SESSION['carrito']);
+                          }else{ 
+                            echo 0;
+                          }
+                        ?>
+                      </span>
+                    </a>
+                  </li> 
+            <li><a href="./account/logout.php"><img src="images/logout.png" width="18px" height="18px"></a></li>
             <?php
             } else {
             ?>
@@ -39,8 +53,8 @@
             ?>
                 </ul>
             </nav>
-            <img src="images/console.png" width="30px" height="30px">
-            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+            
+         
         </div>
     </div>
 </body>

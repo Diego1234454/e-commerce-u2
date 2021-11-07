@@ -1,14 +1,37 @@
 <?php
-
-// Initialize the session
-session_start();
-
+  session_start();
+  include 'config.php';
+  if(isset($_SESSION['carrito'])){
+    //si existe buscamos si ya esta agregado ese producto.
+    
+    }else{
+      //creamos la variable de sesión
+      if(isset($_GET['id'])){
+        $product_name = "";
+        $price = "";
+        $image1 = "";
+        $res = $link->query('select * from products where id=' .$_GET['id']) or die($link->error);
+        $fila = mysqli_fetch_row($res);
+        $product_name = $fila[1];
+        $price = $fila[2];
+        $image1 = $fila[5];
+        $arreglo[] = array(
+          'Id' => $_GET['id'],
+          'Nombre' => $product_name,
+          'Precio' => $price,
+          'Imagen' => $image1,
+          'Cantidad' => 1
+        );
+        $_SESSION['carrito'] = $arreglo;
+      }
+    }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>E-Commerce Website </title>
+    <title>Shopping-Cart </title>
+    <link rel="shortcut icon" href="images/studio.png" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -49,14 +72,15 @@ session_start();
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+
+                <tr>
                     <td class="product-thumbnail">
-                      <img src="./Assets/img/codm.jpg" width="100" height="100" alt="Image" class="img-fluid">
+                      <img src="./Assets/img/codm.jpg" width="100" alt="Image" class="img-fluid">
                     </td>
                     <td class="product-name">
-                      <h2 class="h5 text-black">Cod Modern Warfare</h2>
+                      <h2 class="h5 text-black">Call of Duty: Modern Warfare</h2>
                     </td>
-                    <td>$49.00</td>
+                    <td>$650.00</td>
                     <td>
                       <div class="input-group mb-3" style="max-width: 120px;">
                         <div class="input-group-prepend">
@@ -69,18 +93,18 @@ session_start();
                       </div>
 
                     </td>
-                    <td>$49.00</td>
+                    <td>$650.00</td>
                     <td><a href="#" class="btn btn-primary btn-sm">X</a></td>
                   </tr>
 
                   <tr>
                     <td class="product-thumbnail">
-                      <img src="./Assets/img/battle.jpg" width="100" height="100" alt="Image" class="img-fluid">
+                      <img src="./Assets/img/metro.jpg" width="100" alt="Image" class="img-fluid">
                     </td>
                     <td class="product-name">
-                      <h2 class="h5 text-black">Battlefield 2042 </h2>
+                      <h2 class="h5 text-black">Metro: Last Night</h2>
                     </td>
-                    <td>$65.00</td>
+                    <td>$300.00</td>
                     <td>
                       <div class="input-group mb-3" style="max-width: 120px;">
                         <div class="input-group-prepend">
@@ -93,9 +117,10 @@ session_start();
                       </div>
 
                     </td>
-                    <td>$65.00</td>
+                    <td>$300.00</td>
                     <td><a href="#" class="btn btn-primary btn-sm">X</a></td>
                   </tr>
+
                 </tbody>
               </table>
             </div>
@@ -106,10 +131,15 @@ session_start();
           <div class="col-md-6">
             <div class="row mb-5">
               <div class="col-md-6 mb-3 mb-md-0">
-                <button class="btn btn-primary btn-sm btn-block">Update Cart</button>
+                <a href="cart.php">
+                  <button class="btn btn-primary btn-sm btn-block">Update Cart</button>
+
+                </a>
               </div>
               <div class="col-md-6">
+                <a href="products.php"
                 <button class="btn btn-outline-primary btn-sm btn-block">Continue Shopping</button>
+              </a>
               </div>
             </div>
             <div class="row">
@@ -138,7 +168,7 @@ session_start();
                     <span class="text-black">Subtotal</span>
                   </div>
                   <div class="col-md-6 text-right">
-                    <strong class="text-black">$114.00 USD</strong>
+                    <strong class="text-black">$950.00</strong>
                   </div>
                 </div>
                 <div class="row mb-5">
@@ -146,7 +176,7 @@ session_start();
                     <span class="text-black">Total</span>
                   </div>
                   <div class="col-md-6 text-right">
-                    <strong class="text-black">$114.00 USD</strong>
+                    <strong class="text-black">$950.00</strong>
                   </div>
                 </div>
 
@@ -163,7 +193,6 @@ session_start();
     </div>
 
     <?php include("./layouts/footer.php"); ?> 
-    
   </div>
 
   <script src="js/jquery-3.3.1.min.js"></script>
